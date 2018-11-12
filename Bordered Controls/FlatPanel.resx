@@ -117,44 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="PanelText4.ButtonImg" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29m
-        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAFSSURBVDhPnVKhdsMwDOwn9BPyCYaDhoOGg4aFgYGG
-        g4aBhoGGhYaDgoWCg4JhmuQ4eVmX9m3Te1cnJ9354vr0qHhmhRX4BttaWzFze7orHaaZc7oRBEBUZCQQ
-        PghMGzs2UDF8UnFXJDMB7+GFQ6KymvwwkMaJZsp+ArKjCGRNHwgKlxqXgTRJnT8wsDpsowyKQM2UEziS
-        nd0oJtIDrCm6IwMfMqJ9L5wK6jdvB3fUe2AAaEPheK1DrrWW3rT0nhmYAljsUNiFQiiHKVyv0NjKKxp/
-        PkwANzHoM6/oR0DF+h4z6O6+zu8Nvokvmd2QSdc94lTFmmjRrAYqrtF9YvOW6mnpP4ASOxeALN9MS2y9
-        kYtIqhoI0anYuMjmNbAfUhULbwTnttbnpttqNXAhZuxeevaXuInbzNNaDXSXPo5yc/4g1ro/RL1x7e13
-        tSSQn/+DT1+hBvM5P2IkZAAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="PanelText3.ButtonImg" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29m
-        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAFSSURBVDhPnVKhdsMwDOwn9BPyCYaDhoOGg4aFgYGG
-        g4aBhoGGhYaDgoWCg4JhmuQ4eVmX9m3Te1cnJ9354vr0qHhmhRX4BttaWzFze7orHaaZc7oRBEBUZCQQ
-        PghMGzs2UDF8UnFXJDMB7+GFQ6KymvwwkMaJZsp+ArKjCGRNHwgKlxqXgTRJnT8wsDpsowyKQM2UEziS
-        nd0oJtIDrCm6IwMfMqJ9L5wK6jdvB3fUe2AAaEPheK1DrrWW3rT0nhmYAljsUNiFQiiHKVyv0NjKKxp/
-        PkwANzHoM6/oR0DF+h4z6O6+zu8Nvokvmd2QSdc94lTFmmjRrAYqrtF9YvOW6mnpP4ASOxeALN9MS2y9
-        kYtIqhoI0anYuMjmNbAfUhULbwTnttbnpttqNXAhZuxeevaXuInbzNNaDXSXPo5yc/4g1ro/RL1x7e13
-        tSSQn/+DT1+hBvM5P2IkZAAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="PanelText1.ButtonImg" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29m
-        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAFSSURBVDhPnVKhdsMwDOwn9BPyCYaDhoOGg4aFgYGG
-        g4aBhoGGhYaDgoWCg4JhmuQ4eVmX9m3Te1cnJ9354vr0qHhmhRX4BttaWzFze7orHaaZc7oRBEBUZCQQ
-        PghMGzs2UDF8UnFXJDMB7+GFQ6KymvwwkMaJZsp+ArKjCGRNHwgKlxqXgTRJnT8wsDpsowyKQM2UEziS
-        nd0oJtIDrCm6IwMfMqJ9L5wK6jdvB3fUe2AAaEPheK1DrrWW3rT0nhmYAljsUNiFQiiHKVyv0NjKKxp/
-        PkwANzHoM6/oR0DF+h4z6O6+zu8Nvokvmd2QSdc94lTFmmjRrAYqrtF9YvOW6mnpP4ASOxeALN9MS2y9
-        kYtIqhoI0anYuMjmNbAfUhULbwTnttbnpttqNXAhZuxeevaXuInbzNNaDXSXPo5yc/4g1ro/RL1x7e13
-        tSSQn/+DT1+hBvM5P2IkZAAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>25</value>
+  <metadata name="$this.TrayLargeIcon" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
   </metadata>
 </root>

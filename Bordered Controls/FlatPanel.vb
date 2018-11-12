@@ -12,17 +12,31 @@ Public Class FlatPanel
     Dim _FlatBorderColor As Color
     Dim _FlatBorderSize As Integer = 4
 
-    Dim l As Label = New Label With {.Dock = DockStyle.Left, .Width = 4, .BackColor = Color.Green, .Visible = False}
-    Dim r As Label = New Label With {.Dock = DockStyle.Right, .Width = 4, .BackColor = Color.Green, .Visible = False}
-    Dim t As Label = New Label With {.Dock = DockStyle.Top, .Height = 4, .BackColor = Color.Green, .Visible = False}
-    Dim b As Label = New Label With {.Dock = DockStyle.Bottom, .Height = 4, .BackColor = Color.Green, .Visible = False}
+    Dim l As Label = New Label With {.Name = "lblLeft", .Dock = DockStyle.Left, .Width = 4, .BackColor = Color.Green, .Visible = False}
+    Dim r As Label = New Label With {.Name = "lblRight", .Dock = DockStyle.Right, .Width = 4, .BackColor = Color.Green, .Visible = False}
+    Dim t As Label = New Label With {.Name = "lblTop", .Dock = DockStyle.Top, .Height = 4, .BackColor = Color.Green, .Visible = False}
+    Dim b As Label = New Label With {.Name = "lblBottom", .Dock = DockStyle.Bottom, .Height = 4, .BackColor = Color.Green, .Visible = False}
     Public Sub New()
         Me.DoubleBuffered = True
         Me.Size = New Size(200, 100)
         SetStyle(ControlStyles.AllPaintingInWmPaint Or
         ControlStyles.DoubleBuffer Or ControlStyles.ResizeRedraw Or ControlStyles.UserPaint, True)
+        'Controls.AddRange(New Control() {l, r, r, b})
         Controls.AddRange(New Control() {l, r, t, b})
         Me.Update()
+    End Sub
+
+    Protected Overrides Sub OnHandleCreated(ByVal e As EventArgs)
+        MyBase.OnHandleCreated(e)
+        setPosition()
+    End Sub
+
+    Private Sub setPosition()
+        For Each obj As Control In MyBase.Controls
+            If obj.Name <> l.Name And obj.Name <> t.Name And obj.Name <> r.Name And obj.Name <> b.Name Then
+                obj.BringToFront()
+            End If
+        Next
     End Sub
 
     Public Property FlatBorderBottom As Boolean
@@ -100,4 +114,5 @@ Public Class FlatPanel
             b.Height = _FlatBorderSize
         End Set
     End Property
+
 End Class
