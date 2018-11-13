@@ -76,4 +76,22 @@
     Private Sub PanelText4_TextChanged(sender As Object, e As EventArgs) Handles PanelText4.TextChanged
 
     End Sub
+
+    Private Sub TextBox1_TextChanged_1(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
+
+    End Sub
+
+    Private Sub TextBox1_Paint(sender As Object, e As PaintEventArgs) Handles TextBox1.Paint
+
+    End Sub
+
+    Private Sub Form1_Paint(sender As Object, e As PaintEventArgs) Handles Me.Paint
+        If TextBox1.Text = "" Then
+            TextBox1.CreateGraphics.DrawString("Enter Text Here", TextBox1.Font, New SolidBrush(Color.Blue), 0, 0)
+        End If
+    End Sub
+
+    Private Sub PanelText4_ButtonClick(sender As Object, e As EventArgs) Handles PanelText4.ButtonClick
+        Me.Text = PanelText4.Text
+    End Sub
 End Class

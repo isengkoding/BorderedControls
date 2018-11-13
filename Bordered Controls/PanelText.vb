@@ -31,6 +31,7 @@ Public Class PanelText
     Dim _UsePasswordChar As Boolean = False
     Dim _PasswordChar As Char
     Dim _MultilineText As Boolean
+    Dim _WaterMark As String
 
     'CustomButton Properties
     Dim _ButtonWidth As Integer = 25
@@ -62,18 +63,18 @@ Public Class PanelText
         SetStyle(ControlStyles.AllPaintingInWmPaint Or
         ControlStyles.DoubleBuffer Or ControlStyles.ResizeRedraw Or ControlStyles.UserPaint Or ControlStyles.SupportsTransparentBackColor, True)
         Controls.AddRange(New Control() {pnlTxt, lblClear, btn, l, r, t, b})
+        'pnlTxt.Visible = False
         txt.TabStop = False
         pnlTxt.Controls.Add(txt)
         pnlTxt.Padding = _TextPadding
         AddHandler txt.LostFocus, AddressOf txtLost
-        AddHandler txt.GotFocus, AddressOf txtFocus
+        AddHandler txt.Enter, AddressOf txtFocus
         AddHandler txt.TextChanged, AddressOf txtChanged
         AddHandler txt.Click, AddressOf txtClick
         AddHandler txt.DoubleClick, AddressOf txtDoubleClick
         AddHandler txt.KeyPress, AddressOf txtKeyPress
         AddHandler txt.KeyDown, AddressOf txtKeyDown
         AddHandler txt.KeyUp, AddressOf txtKeyUp
-
         AddHandler lblClear.Click, AddressOf clearText
         AddHandler btn.Click, AddressOf btnClick
         btn.FlatAppearance.BorderSize = 0
@@ -83,6 +84,20 @@ Public Class PanelText
         lblClear.Cursor = Cursors.Arrow
         Me.Text = Me.Name
         Me.Update()
+    End Sub
+
+    Protected Overrides Sub WndProc(ByRef m As Message)
+        MyBase.WndProc(m)
+        Dim sTxt As String = Me.Text
+        sTxt = IIf(sTxt.Length = 0, txt.Text, sTxt)
+        If m.Msg = &HF Then
+            If Not Me.Focused AndAlso String.IsNullOrEmpty(sTxt) AndAlso Not String.IsNullOrEmpty(Me.WaterMark) Then
+                Using g = Me.CreateGraphics()
+                    TextRenderer.DrawText(g, Me.WaterMark, Me.Font, Me.ClientRectangle, Color.Red, Me.BackColor, TextFormatFlags.Top Or TextFormatFlags.Left)
+                End Using
+            End If
+            MyBase.Update()
+        End If
     End Sub
 
     Private Sub txtKeyUp(sender As Object, e As KeyEventArgs)
@@ -128,6 +143,7 @@ Public Class PanelText
 
     Private Sub clearText(sender As Object, e As EventArgs)
         txt.Text = ""
+        txt.Focus()
     End Sub
 
     Private Sub txtFocus(sender As Object, e As EventArgs)
@@ -135,6 +151,10 @@ Public Class PanelText
         changeTextBackColor(_FocusedBackColor)
         changeSupportCtrlColor(_FocusedBackColor)
         lblClear.ForeColor = Color.Gray
+        If txt.Text = WaterMark And WaterMark IsNot Nothing And WaterMark <> "" Then
+            txt.Text = ""
+            txt.Font = New Font(txt.Font, FontStyle.Regular)
+        End If
         txt.SelectAll()
         MyBase.OnGotFocus(e)
     End Sub
@@ -144,6 +164,10 @@ Public Class PanelText
         changeBorderColor(_FlatBorderColor)
         changeSupportCtrlColor(_TextBackColor)
         lblClear.ForeColor = Color.LightGray
+        If (txt.Text = WaterMark Or txt.Text.Length = 0) And WaterMark IsNot Nothing And WaterMark <> "" Then
+            txt.Text = WaterMark
+            txt.Font = New Font(txt.Font, FontStyle.Italic)
+        End If
         MyBase.OnLostFocus(e)
     End Sub
 
@@ -239,7 +263,11 @@ Public Class PanelText
     <Browsable(True), System.ComponentModel.DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)>
     Public Overrides Property Text() As String
         Get
-            Return txt.Text
+            If txt.Text = WaterMark And WaterMark IsNot Nothing And WaterMark <> "" Then
+                Return ""
+            Else
+                Return txt.Text
+            End If
         End Get
         Set(ByVal Value As String)
             txt.Text = Value
@@ -451,6 +479,16 @@ Public Class PanelText
         End Set
     End Property
 
+    Public Property WaterMark As String
+        Get
+            Return _WaterMark
+        End Get
+        Set(value As String)
+            _WaterMark = value
+            If txt.Text.Length = 0 Then txt.Text = _WaterMark
+        End Set
+    End Property
+
     Private Sub PanelText_Disposed(sender As Object, e As EventArgs) Handles Me.Disposed
         For Each ctrl As Control In Me.Controls
             ctrl.Dispose()
@@ -475,5 +513,14 @@ Public Class PanelText
 
     Private Sub PanelText_Enter(sender As Object, e As EventArgs) Handles Me.Enter
         txt.Focus()
+    End Sub
+
+    Private Sub InitializeComponent()
+        Me.SuspendLayout()
+        '
+        'PanelText
+        '
+        Me.ResumeLayout(False)
+
     End Sub
 End Class

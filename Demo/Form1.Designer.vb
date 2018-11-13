@@ -26,6 +26,8 @@ Partial Class Form1
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.ExTextBox1 = New Demo.ExTextBox()
+        Me.FlatButton2 = New BorderedControls.FlatButton()
         Me.PanelText4 = New BorderedControls.PanelText()
         Me.PanelText3 = New BorderedControls.PanelText()
         Me.PanelText2 = New BorderedControls.PanelText()
@@ -33,7 +35,6 @@ Partial Class Form1
         Me.FlatButton1 = New BorderedControls.FlatButton()
         Me.FlatPanel1 = New BorderedControls.FlatPanel()
         Me.btnHandle = New System.Windows.Forms.Button()
-        Me.FlatButton2 = New BorderedControls.FlatButton()
         Me.FlatPanel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -43,7 +44,6 @@ Partial Class Form1
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(100, 22)
         Me.TextBox1.TabIndex = 9
-        Me.TextBox1.Text = "Normal Text"
         '
         'TextBox2
         '
@@ -64,6 +64,33 @@ Partial Class Form1
         Me.TextBox3.TabIndex = 13
         Me.TextBox3.Text = "Disabled text"
         '
+        'ExTextBox1
+        '
+        Me.ExTextBox1.Hint = "Hello World"
+        Me.ExTextBox1.Location = New System.Drawing.Point(385, 150)
+        Me.ExTextBox1.Name = "ExTextBox1"
+        Me.ExTextBox1.Size = New System.Drawing.Size(100, 22)
+        Me.ExTextBox1.TabIndex = 16
+        '
+        'FlatButton2
+        '
+        Me.FlatButton2.FlatAppearance.BorderSize = 0
+        Me.FlatButton2.FlatBorderBottom = True
+        Me.FlatButton2.FlatBorderColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.FlatButton2.FlatBorderLeft = False
+        Me.FlatButton2.FlatBorderRight = False
+        Me.FlatButton2.FlatBorderSize = 2
+        Me.FlatButton2.FlatBorderTop = False
+        Me.FlatButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.FlatButton2.ForeMouseOver = System.Drawing.Color.AliceBlue
+        Me.FlatButton2.ImgMouseOver = Nothing
+        Me.FlatButton2.Location = New System.Drawing.Point(142, 117)
+        Me.FlatButton2.Name = "FlatButton2"
+        Me.FlatButton2.Size = New System.Drawing.Size(131, 25)
+        Me.FlatButton2.TabIndex = 15
+        Me.FlatButton2.Text = "FlatButton2"
+        Me.FlatButton2.UseVisualStyleBackColor = True
+        '
         'PanelText4
         '
         Me.PanelText4.BackColor = System.Drawing.Color.White
@@ -81,7 +108,7 @@ Partial Class Form1
         Me.PanelText4.FlatBorderSize = 2
         Me.PanelText4.FlatBorderTop = False
         Me.PanelText4.FocusedBackColor = System.Drawing.Color.White
-        Me.PanelText4.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.PanelText4.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.PanelText4.Location = New System.Drawing.Point(279, 117)
         Me.PanelText4.Multiline = True
         Me.PanelText4.MultilineText = False
@@ -91,9 +118,8 @@ Partial Class Form1
         Me.PanelText4.ShowClrButton = True
         Me.PanelText4.Size = New System.Drawing.Size(261, 25)
         Me.PanelText4.TabIndex = 14
-        Me.PanelText4.Text = "Search . . . ."
-        Me.PanelText4.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         Me.PanelText4.TextPadding = New System.Windows.Forms.Padding(3)
+        Me.PanelText4.WaterMark = "Hello World"
         '
         'PanelText3
         '
@@ -124,8 +150,10 @@ Partial Class Form1
         Me.PanelText3.ShowClrButton = True
         Me.PanelText3.Size = New System.Drawing.Size(260, 78)
         Me.PanelText3.TabIndex = 11
-        Me.PanelText3.Text = "Hello World ! s sdasd adas dads asd asd ad sssteeetet sd ad ad "
+        Me.PanelText3.Text = "Hello World ! This is my text with multiline text created based on messed up logi" &
+    "c and codes"
         Me.PanelText3.TextPadding = New System.Windows.Forms.Padding(3)
+        Me.PanelText3.WaterMark = Nothing
         '
         'PanelText2
         '
@@ -154,8 +182,8 @@ Partial Class Form1
         Me.PanelText2.ShowClrButton = True
         Me.PanelText2.Size = New System.Drawing.Size(260, 22)
         Me.PanelText2.TabIndex = 10
-        Me.PanelText2.Text = "Disabled with Custom Back Color"
         Me.PanelText2.TextPadding = New System.Windows.Forms.Padding(3)
+        Me.PanelText2.WaterMark = Nothing
         '
         'PanelText1
         '
@@ -184,10 +212,11 @@ Partial Class Form1
         Me.PanelText1.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal
         Me.PanelText1.ShowButton = True
         Me.PanelText1.ShowClrButton = True
-        Me.PanelText1.Size = New System.Drawing.Size(260, 24)
+        Me.PanelText1.Size = New System.Drawing.Size(260, 22)
         Me.PanelText1.TabIndex = 7
-        Me.PanelText1.Text = "Hello World ! "
+        Me.PanelText1.Text = "Tet"
         Me.PanelText1.TextPadding = New System.Windows.Forms.Padding(3)
+        Me.PanelText1.WaterMark = Nothing
         '
         'FlatButton1
         '
@@ -236,31 +265,13 @@ Partial Class Form1
         Me.btnHandle.Text = "Button2"
         Me.btnHandle.UseVisualStyleBackColor = True
         '
-        'FlatButton2
-        '
-        Me.FlatButton2.FlatAppearance.BorderSize = 0
-        Me.FlatButton2.FlatBorderBottom = True
-        Me.FlatButton2.FlatBorderColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
-        Me.FlatButton2.FlatBorderLeft = False
-        Me.FlatButton2.FlatBorderRight = False
-        Me.FlatButton2.FlatBorderSize = 2
-        Me.FlatButton2.FlatBorderTop = False
-        Me.FlatButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.FlatButton2.ForeMouseOver = System.Drawing.Color.AliceBlue
-        Me.FlatButton2.ImgMouseOver = Nothing
-        Me.FlatButton2.Location = New System.Drawing.Point(142, 117)
-        Me.FlatButton2.Name = "FlatButton2"
-        Me.FlatButton2.Size = New System.Drawing.Size(131, 25)
-        Me.FlatButton2.TabIndex = 15
-        Me.FlatButton2.Text = "FlatButton2"
-        Me.FlatButton2.UseVisualStyleBackColor = True
-        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(550, 288)
+        Me.Controls.Add(Me.ExTextBox1)
         Me.Controls.Add(Me.FlatButton2)
         Me.Controls.Add(Me.PanelText4)
         Me.Controls.Add(Me.TextBox3)
@@ -290,4 +301,5 @@ Partial Class Form1
     Friend WithEvents PanelText4 As BorderedControls.PanelText
     Friend WithEvents btnHandle As Button
     Friend WithEvents FlatButton2 As BorderedControls.FlatButton
+    Friend WithEvents ExTextBox1 As ExTextBox
 End Class
