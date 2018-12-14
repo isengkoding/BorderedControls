@@ -23,54 +23,158 @@ Partial Class Form1
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.ExTextBox1 = New Demo.ExTextBox()
+        Me.FlatPanel2 = New BorderedControls.FlatPanel()
+        Me.FlatCombo1 = New BorderedControls.FlatCombo()
+        Me.FlatPanel3 = New BorderedControls.FlatPanel()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.btnHandle = New System.Windows.Forms.Button()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.FlatButton2 = New BorderedControls.FlatButton()
         Me.PanelText4 = New BorderedControls.PanelText()
+        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.PanelText3 = New BorderedControls.PanelText()
         Me.PanelText2 = New BorderedControls.PanelText()
         Me.PanelText1 = New BorderedControls.PanelText()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.FlatButton1 = New BorderedControls.FlatButton()
         Me.FlatPanel1 = New BorderedControls.FlatPanel()
-        Me.btnHandle = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.ColoredCombo1 = New Demo.ColoredCombo()
+        Me.ExTextBox1 = New Demo.ExTextBox()
+        Me.FlatPanel2.SuspendLayout()
+        Me.FlatPanel3.SuspendLayout()
+        Me.Panel1.SuspendLayout()
         Me.FlatPanel1.SuspendLayout()
         Me.SuspendLayout()
         '
-        'TextBox1
+        'FlatPanel2
         '
-        Me.TextBox1.Location = New System.Drawing.Point(279, 150)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(100, 22)
-        Me.TextBox1.TabIndex = 9
+        Me.FlatPanel2.Controls.Add(Me.FlatCombo1)
+        Me.FlatPanel2.Controls.Add(Me.FlatPanel3)
+        Me.FlatPanel2.Controls.Add(Me.ColoredCombo1)
+        Me.FlatPanel2.Controls.Add(Me.Panel1)
+        Me.FlatPanel2.Controls.Add(Me.ExTextBox1)
+        Me.FlatPanel2.Controls.Add(Me.FlatButton2)
+        Me.FlatPanel2.Controls.Add(Me.PanelText4)
+        Me.FlatPanel2.Controls.Add(Me.TextBox3)
+        Me.FlatPanel2.Controls.Add(Me.TextBox2)
+        Me.FlatPanel2.Controls.Add(Me.PanelText3)
+        Me.FlatPanel2.Controls.Add(Me.PanelText2)
+        Me.FlatPanel2.Controls.Add(Me.PanelText1)
+        Me.FlatPanel2.Controls.Add(Me.TextBox1)
+        Me.FlatPanel2.Controls.Add(Me.FlatButton1)
+        Me.FlatPanel2.Controls.Add(Me.FlatPanel1)
+        Me.FlatPanel2.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.FlatPanel2.FlatBorderBottom = False
+        Me.FlatPanel2.FlatBorderColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.FlatPanel2.FlatBorderLeft = False
+        Me.FlatPanel2.FlatBorderRight = False
+        Me.FlatPanel2.FlatBorderSize = 10
+        Me.FlatPanel2.FlatBorderTop = True
+        Me.FlatPanel2.Location = New System.Drawing.Point(0, 0)
+        Me.FlatPanel2.Name = "FlatPanel2"
+        Me.FlatPanel2.PanelDoubleBuffer = True
+        Me.FlatPanel2.Size = New System.Drawing.Size(739, 443)
+        Me.FlatPanel2.TabIndex = 18
         '
-        'TextBox2
+        'FlatCombo1
         '
-        Me.TextBox2.AcceptsReturn = True
-        Me.TextBox2.Location = New System.Drawing.Point(279, 178)
-        Me.TextBox2.Multiline = True
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(260, 76)
-        Me.TextBox2.TabIndex = 12
-        Me.TextBox2.Text = "Normal Text"
+        Me.FlatCombo1.BorderColor = System.Drawing.Color.Gainsboro
+        Me.FlatCombo1.BorderColorFocused = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(231, Byte), Integer))
+        Me.FlatCombo1.FormattingEnabled = True
+        Me.FlatCombo1.Location = New System.Drawing.Point(590, 258)
+        Me.FlatCombo1.Name = "FlatCombo1"
+        Me.FlatCombo1.Size = New System.Drawing.Size(121, 21)
+        Me.FlatCombo1.TabIndex = 21
         '
-        'TextBox3
+        'FlatPanel3
         '
-        Me.TextBox3.Enabled = False
-        Me.TextBox3.Location = New System.Drawing.Point(279, 258)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(100, 22)
-        Me.TextBox3.TabIndex = 13
-        Me.TextBox3.Text = "Disabled text"
+        Me.FlatPanel3.Controls.Add(Me.ComboBox1)
+        Me.FlatPanel3.FlatBorderBottom = True
+        Me.FlatPanel3.FlatBorderColor = System.Drawing.Color.Aqua
+        Me.FlatPanel3.FlatBorderLeft = True
+        Me.FlatPanel3.FlatBorderRight = True
+        Me.FlatPanel3.FlatBorderSize = 1
+        Me.FlatPanel3.FlatBorderTop = True
+        Me.FlatPanel3.Location = New System.Drawing.Point(549, 231)
+        Me.FlatPanel3.Name = "FlatPanel3"
+        Me.FlatPanel3.PanelDoubleBuffer = True
+        Me.FlatPanel3.Size = New System.Drawing.Size(162, 23)
+        Me.FlatPanel3.TabIndex = 20
         '
-        'ExTextBox1
+        'ComboBox1
         '
-        Me.ExTextBox1.Hint = "Hello World"
-        Me.ExTextBox1.Location = New System.Drawing.Point(385, 150)
-        Me.ExTextBox1.Name = "ExTextBox1"
-        Me.ExTextBox1.Size = New System.Drawing.Size(100, 22)
-        Me.ExTextBox1.TabIndex = 16
+        Me.ComboBox1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.ComboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Location = New System.Drawing.Point(0, 0)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(162, 21)
+        Me.ComboBox1.TabIndex = 19
+        '
+        'Panel1
+        '
+        Me.Panel1.Controls.Add(Me.btnHandle)
+        Me.Panel1.Controls.Add(Me.Label3)
+        Me.Panel1.Controls.Add(Me.Label2)
+        Me.Panel1.Controls.Add(Me.Label1)
+        Me.Panel1.Controls.Add(Me.Label4)
+        Me.Panel1.Location = New System.Drawing.Point(14, 286)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(524, 155)
+        Me.Panel1.TabIndex = 17
+        '
+        'btnHandle
+        '
+        Me.btnHandle.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.btnHandle.Dock = System.Windows.Forms.DockStyle.Top
+        Me.btnHandle.Location = New System.Drawing.Point(2, 2)
+        Me.btnHandle.Name = "btnHandle"
+        Me.btnHandle.Size = New System.Drawing.Size(520, 25)
+        Me.btnHandle.TabIndex = 13
+        Me.btnHandle.Text = "Button2"
+        Me.btnHandle.UseVisualStyleBackColor = True
+        '
+        'Label3
+        '
+        Me.Label3.BackColor = System.Drawing.Color.Red
+        Me.Label3.Dock = System.Windows.Forms.DockStyle.Left
+        Me.Label3.Location = New System.Drawing.Point(0, 2)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(2, 151)
+        Me.Label3.TabIndex = 2
+        '
+        'Label2
+        '
+        Me.Label2.BackColor = System.Drawing.Color.Red
+        Me.Label2.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.Label2.Location = New System.Drawing.Point(0, 153)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(522, 2)
+        Me.Label2.TabIndex = 1
+        '
+        'Label1
+        '
+        Me.Label1.BackColor = System.Drawing.Color.Red
+        Me.Label1.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Label1.Location = New System.Drawing.Point(0, 0)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(522, 2)
+        Me.Label1.TabIndex = 0
+        '
+        'Label4
+        '
+        Me.Label4.BackColor = System.Drawing.Color.Red
+        Me.Label4.Dock = System.Windows.Forms.DockStyle.Right
+        Me.Label4.Location = New System.Drawing.Point(522, 0)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(2, 155)
+        Me.Label4.TabIndex = 3
         '
         'FlatButton2
         '
@@ -113,6 +217,7 @@ Partial Class Form1
         Me.PanelText4.Multiline = True
         Me.PanelText4.MultilineText = False
         Me.PanelText4.Name = "PanelText4"
+        Me.PanelText4.NumericOnly = False
         Me.PanelText4.PanelDoubleBuffer = True
         Me.PanelText4.ShowButton = True
         Me.PanelText4.ShowClrButton = True
@@ -120,6 +225,25 @@ Partial Class Form1
         Me.PanelText4.TabIndex = 14
         Me.PanelText4.TextPadding = New System.Windows.Forms.Padding(3)
         Me.PanelText4.WaterMark = "Hello World"
+        '
+        'TextBox3
+        '
+        Me.TextBox3.Enabled = False
+        Me.TextBox3.Location = New System.Drawing.Point(279, 258)
+        Me.TextBox3.Name = "TextBox3"
+        Me.TextBox3.Size = New System.Drawing.Size(100, 22)
+        Me.TextBox3.TabIndex = 13
+        Me.TextBox3.Text = "Disabled text"
+        '
+        'TextBox2
+        '
+        Me.TextBox2.AcceptsReturn = True
+        Me.TextBox2.Location = New System.Drawing.Point(279, 178)
+        Me.TextBox2.Multiline = True
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(260, 76)
+        Me.TextBox2.TabIndex = 12
+        Me.TextBox2.Text = "Normal Text"
         '
         'PanelText3
         '
@@ -144,6 +268,7 @@ Partial Class Form1
         Me.PanelText3.Multiline = True
         Me.PanelText3.MultilineText = True
         Me.PanelText3.Name = "PanelText3"
+        Me.PanelText3.NumericOnly = False
         Me.PanelText3.PanelDoubleBuffer = True
         Me.PanelText3.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal
         Me.PanelText3.ShowButton = True
@@ -177,6 +302,7 @@ Partial Class Form1
         Me.PanelText2.Multiline = True
         Me.PanelText2.MultilineText = False
         Me.PanelText2.Name = "PanelText2"
+        Me.PanelText2.NumericOnly = False
         Me.PanelText2.PanelDoubleBuffer = True
         Me.PanelText2.ShowButton = True
         Me.PanelText2.ShowClrButton = True
@@ -208,6 +334,7 @@ Partial Class Form1
         Me.PanelText1.Multiline = True
         Me.PanelText1.MultilineText = False
         Me.PanelText1.Name = "PanelText1"
+        Me.PanelText1.NumericOnly = False
         Me.PanelText1.PanelDoubleBuffer = True
         Me.PanelText1.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal
         Me.PanelText1.ShowButton = True
@@ -217,6 +344,13 @@ Partial Class Form1
         Me.PanelText1.Text = "Tet"
         Me.PanelText1.TextPadding = New System.Windows.Forms.Padding(3)
         Me.PanelText1.WaterMark = Nothing
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(279, 150)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(100, 22)
+        Me.TextBox1.TabIndex = 9
         '
         'FlatButton1
         '
@@ -241,7 +375,7 @@ Partial Class Form1
         '
         Me.FlatPanel1.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.FlatPanel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.FlatPanel1.Controls.Add(Me.btnHandle)
+        Me.FlatPanel1.Controls.Add(Me.Button1)
         Me.FlatPanel1.FlatBorderBottom = False
         Me.FlatPanel1.FlatBorderColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.FlatPanel1.FlatBorderLeft = False
@@ -254,40 +388,51 @@ Partial Class Form1
         Me.FlatPanel1.Size = New System.Drawing.Size(526, 100)
         Me.FlatPanel1.TabIndex = 2
         '
-        'btnHandle
+        'Button1
         '
-        Me.btnHandle.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.btnHandle.Dock = System.Windows.Forms.DockStyle.Top
-        Me.btnHandle.Location = New System.Drawing.Point(0, 4)
-        Me.btnHandle.Name = "btnHandle"
-        Me.btnHandle.Size = New System.Drawing.Size(524, 25)
-        Me.btnHandle.TabIndex = 12
-        Me.btnHandle.Text = "Button2"
-        Me.btnHandle.UseVisualStyleBackColor = True
+        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.Button1.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Button1.Location = New System.Drawing.Point(0, 0)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(524, 25)
+        Me.Button1.TabIndex = 14
+        Me.Button1.Text = "Button2"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'ColoredCombo1
+        '
+        Me.ColoredCombo1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ColoredCombo1.FormattingEnabled = True
+        Me.ColoredCombo1.Items.AddRange(New Object() {"", "A", "B", "C", "D"})
+        Me.ColoredCombo1.Location = New System.Drawing.Point(590, 191)
+        Me.ColoredCombo1.Name = "ColoredCombo1"
+        Me.ColoredCombo1.Size = New System.Drawing.Size(121, 21)
+        Me.ColoredCombo1.TabIndex = 19
+        '
+        'ExTextBox1
+        '
+        Me.ExTextBox1.Hint = "Hello World"
+        Me.ExTextBox1.Location = New System.Drawing.Point(385, 150)
+        Me.ExTextBox1.Name = "ExTextBox1"
+        Me.ExTextBox1.Size = New System.Drawing.Size(100, 22)
+        Me.ExTextBox1.TabIndex = 16
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(550, 288)
-        Me.Controls.Add(Me.ExTextBox1)
-        Me.Controls.Add(Me.FlatButton2)
-        Me.Controls.Add(Me.PanelText4)
-        Me.Controls.Add(Me.TextBox3)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.PanelText3)
-        Me.Controls.Add(Me.PanelText2)
-        Me.Controls.Add(Me.TextBox1)
-        Me.Controls.Add(Me.PanelText1)
-        Me.Controls.Add(Me.FlatButton1)
-        Me.Controls.Add(Me.FlatPanel1)
+        Me.ClientSize = New System.Drawing.Size(739, 443)
+        Me.Controls.Add(Me.FlatPanel2)
         Me.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Name = "Form1"
         Me.Text = "Form1"
+        Me.FlatPanel2.ResumeLayout(False)
+        Me.FlatPanel2.PerformLayout()
+        Me.FlatPanel3.ResumeLayout(False)
+        Me.Panel1.ResumeLayout(False)
         Me.FlatPanel1.ResumeLayout(False)
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
     Friend WithEvents FlatButton1 As BorderedControls.FlatButton
@@ -299,7 +444,18 @@ Partial Class Form1
     Friend WithEvents TextBox2 As TextBox
     Friend WithEvents TextBox3 As TextBox
     Friend WithEvents PanelText4 As BorderedControls.PanelText
-    Friend WithEvents btnHandle As Button
     Friend WithEvents FlatButton2 As BorderedControls.FlatButton
     Friend WithEvents ExTextBox1 As ExTextBox
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents btnHandle As Button
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Label1 As Label
+    Friend WithEvents Label4 As Label
+    Friend WithEvents Button1 As Button
+    Friend WithEvents FlatPanel2 As BorderedControls.FlatPanel
+    Friend WithEvents ColoredCombo1 As ColoredCombo
+    Friend WithEvents FlatPanel3 As BorderedControls.FlatPanel
+    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents FlatCombo1 As BorderedControls.FlatCombo
 End Class

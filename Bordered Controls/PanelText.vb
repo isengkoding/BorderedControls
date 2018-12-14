@@ -33,12 +33,15 @@ Public Class PanelText
     Dim _MultilineText As Boolean
     Dim _WaterMark As String
 
+
     'CustomButton Properties
     Dim _ButtonWidth As Integer = 25
     Dim _ButtonImg As Image
     Dim _ButtonTxt As String
     Dim _ButtonBackColor As Color = Color.DodgerBlue
     Dim _ButtonFocusedColor As Color = Color.AliceBlue
+
+    Dim _NumericOnly As Boolean
 
     'Declare support controls
     Dim txt As TextBox = New TextBox With {.Dock = DockStyle.Fill, .BorderStyle = BorderStyle.None, .Multiline = True}
@@ -486,6 +489,15 @@ Public Class PanelText
         Set(value As String)
             _WaterMark = value
             If txt.Text.Length = 0 Then txt.Text = _WaterMark
+        End Set
+    End Property
+
+    Public Property NumericOnly As Boolean
+        Get
+            Return _NumericOnly
+        End Get
+        Set(value As Boolean)
+            _NumericOnly = value
         End Set
     End Property
 

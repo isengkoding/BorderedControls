@@ -33,8 +33,9 @@ Public Class FlatPanel
 
     Private Sub setPosition()
         For Each obj As Control In MyBase.Controls
-            If obj.Name <> l.Name And obj.Name <> t.Name And obj.Name <> r.Name And obj.Name <> b.Name Then
-                obj.BringToFront()
+            If obj.Name = l.Name Or obj.Name = t.Name Or obj.Name = r.Name Or obj.Name = b.Name Then
+                'obj.BringToFront()
+                obj.SendToBack()
             End If
         Next
     End Sub

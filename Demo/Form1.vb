@@ -32,7 +32,7 @@
 
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles btnHandle.Click
+    Private Sub Button2_Click(sender As Object, e As EventArgs)
 
     End Sub
 
@@ -94,4 +94,17 @@
     Private Sub PanelText4_ButtonClick(sender As Object, e As EventArgs) Handles PanelText4.ButtonClick
         Me.Text = PanelText4.Text
     End Sub
+
+    Private Sub btnHandle_Click(sender As Object, e As EventArgs) Handles btnHandle.Click
+        Dim frm As New Form2
+        frm.Show()
+    End Sub
+
+    Protected Overrides ReadOnly Property CreateParams As CreateParams
+        Get
+            Dim cp As CreateParams = MyBase.CreateParams
+            cp.ExStyle = cp.ExStyle Or &H2000000
+            Return cp
+        End Get
+    End Property
 End Class
